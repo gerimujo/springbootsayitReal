@@ -1,6 +1,7 @@
 package com.SayItApp.SayItOrganization.Filter;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -80,7 +81,7 @@ public JwtFilter(){
                 userDetails, null,
                 userDetails == null ?
                 
-                    List.of() : userDetails.getAuthorities()
+                   Arrays.asList() : userDetails.getAuthorities()
                   
             );
 System.out.println("Authorities: " + userDetails.getAuthorities().stream()

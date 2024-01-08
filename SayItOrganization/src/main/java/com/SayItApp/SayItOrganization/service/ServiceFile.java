@@ -712,7 +712,19 @@ try{
           }
 List<Postimet> trepostime = new ArrayList<>();
                  List<Postimet> response = new ArrayList<>();
-            List<Postimet> allData =  postimetRepro.findAll();
+            List<Postimet> allData2 =  postimetRepro.findAll();
+            List<Postimet> allData = new ArrayList<>();
+
+            for(int c =0; c<allData2.size();c++){
+              Postimet postimetsave  = new Postimet(allData2.get(c).getId(), allData2.get(c).getTitulli(), allData2.get(c).getTipi(), allData2.get(c).getData(), allData2.get(c).getPhoto1(), null, null, null, null, null, null, null, null, allData2.get(c).getPershkrim());
+allData.add(postimetsave);
+
+            }
+
+
+
+
+
             if(allData.size()>=3){
               trepostime.add(allData.get(allData.size()-1));
                trepostime.add(allData.get(allData.size()-2));
@@ -815,8 +827,19 @@ try{
           }
 
                  List<Postimet> response = new ArrayList<>();
-            List<Postimet> allData =  postimetRepro.findAll();
+            List<Postimet> allData1 =  postimetRepro.findAll();
         
+   List<Postimet> allData = new ArrayList<>();
+
+ for(int c =0; c<allData1.size();c++){
+              Postimet postimetsave  = new Postimet(allData1.get(c).getId(), allData1.get(c).getTitulli(), allData1.get(c).getTipi(), allData1.get(c).getData(), allData1.get(c).getPhoto1(), null, null, null, null, null, null, null, null, allData1.get(c).getPershkrim());
+allData.add(postimetsave);
+
+            }
+
+        
+
+
          List<List> responseBig = new ArrayList();
 
             if(allData.size()>(number-1)*6){
